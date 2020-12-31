@@ -1,0 +1,688 @@
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+ 
+}
+header{
+    width: 100%;
+    height: 15vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
+    border-bottom: dashed 3px black;
+  
+}
+h1{
+    width: 60%;
+    height: 15vh;
+    color:black;   
+    display: -webkit-box;   
+    display: -ms-flexbox;   
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 500%;
+    font-family:'Nerko One', cursive;
+    letter-spacing: 2px;
+}
+.container-menu{
+    position: absolute;
+    right: 40px;
+    top: 40px;
+  
+}
+.btn-circle{
+    background: white;
+    display: block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    z-index: 1500;
+    outline: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;  
+    position: relative;
+}
+.line{
+    width: 50%;
+    height:3px;
+    background: black;
+    -webkit-transition: 
+    opacity 0.2s ease,
+    top 0.2s ease 0.2s,
+    -webkit-transform 0.2s ease;
+    transition: 
+    opacity 0.2s ease,
+    top 0.2s ease 0.2s,
+    -webkit-transform 0.2s ease;
+    -o-transition: 
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    top 0.2s ease 0.2s ;
+    transition: 
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    top 0.2s ease 0.2s ;
+    transition: 
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    top 0.2s ease 0.2s,
+    -webkit-transform 0.2s ease;
+    position: relative;
+}
+ .line:nth-child(1){
+top:-10px;
+}
+.line:nth-child(3){
+    top:10px;
+} 
+.btn-circle.menu-anim .line:nth-child(1){
+    top:3px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transition:top 0.2s ease,
+    -webkit-transform 0.2s ease;
+    transition:top 0.2s ease,
+    -webkit-transform 0.2s ease;
+    -o-transition:top 0.2s ease,
+    transform 0.2s ease;
+    transition:top 0.2s ease,
+    transform 0.2s ease;
+    transition:top 0.2s ease,
+    transform 0.2s ease,
+    -webkit-transform 0.2s ease;
+}
+.btn-circle.menu-anim .line:nth-child(2){
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+}
+.btn-circle.menu-anim .line:nth-child(3){
+    top:-3px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transition:top 0.2s ease,
+    -webkit-transform 0.2s ease;
+    transition:top 0.2s ease,
+    -webkit-transform 0.2s ease;
+    -o-transition:top 0.2s ease,
+    transform 0.2s ease;
+    transition:top 0.2s ease,
+    transform 0.2s ease;
+    transition:top 0.2s ease,
+    transform 0.2s ease,
+    -webkit-transform 0.2s ease;
+}
+.circle-menu{
+    background: grey;    
+    width: 480px;
+    height: 480px;
+     border-radius: 50%; 
+    /* border: 90px solid rgba(255,255,255,0.239); */    
+    position: absolute;
+    z-index: 5;
+    top:50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%) scale(0);
+        -ms-transform: translate(-50%,-50%) scale(0);
+            transform: translate(-50%,-50%) scale(0);
+    -webkit-transition: -webkit-transform 0.4s ease 0.5s;
+    transition: -webkit-transform 0.4s ease 0.5s;
+    -o-transition: transform 0.4s ease 0.5s;
+    transition: transform 0.4s ease 0.5s;
+    transition: transform 0.4s ease 0.5s, -webkit-transform 0.4s ease 0.5s;
+}
+.circle-menu.circle-anim{
+    -webkit-transition: -webkit-transform 0.4s ease 0.4s;
+    transition: -webkit-transform 0.4s ease 0.4s;
+    -o-transition: transform 0.4s ease 0.4s;
+    transition: transform 0.4s ease 0.4s;
+    transition: transform 0.4s ease 0.4s, -webkit-transform 0.4s ease 0.4s;
+    -webkit-transform: translate(-50%,-50%) scale(1);
+        -ms-transform: translate(-50%,-50%) scale(1);
+            transform: translate(-50%,-50%) scale(1);
+}
+.lien{
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%) scale(1);
+        -ms-transform: translate(-50%,-50%) scale(1);
+            transform: translate(-50%,-50%) scale(1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+}
+.lien {
+    width: 90px;
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
+    -o-transition: transform 0.2s ease;
+    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+    position: relative;
+
+}
+.lien:nth-child(1){
+    left: 15%;
+    top: 43%;   
+    font-size: 32px;
+    color: orange;
+    text-decoration: none;
+    font-family:'Nerko One', cursive;
+}
+.lien:nth-child(2){
+    left: 21%;
+    top: 48%;   
+    font-size: 32px;
+    color: orange;
+    text-decoration: none;
+    font-family:'Nerko One', cursive;
+}
+
+.lien:nth-child(3){
+    left: 41%;
+    top: 49%; 
+    font-size: 32px;
+    color: orange;
+    text-decoration: none;
+    width: 200px;
+    font-family:'Nerko One', cursive;
+}
+.container{
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);    
+     display: -webkit-box;    
+     display: -ms-flexbox;    
+     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; 
+    display: none;
+    padding: 3%;
+    background: #141414;               
+    border-radius: 9px;
+}
+.container1{
+    position: absolute; 
+    top: 30%;
+    left: 40%;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    width: 370px;
+    height: 370px;
+    background: #141414;              
+    border-radius: 9px;   
+    display: -webkit-box;   
+    display: -ms-flexbox;   
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+     /* transform: translateX(-1200px);  */
+     -webkit-animation:arrive 150ms forwards 0s, rotation 550ms linear 250ms;
+             animation:arrive 150ms forwards 0s, rotation 550ms linear 250ms;
+      color:white;   
+}
+input[type="mail"], input[type="password"] {
+    padding-left: 70px;
+    border-radius: 4px;
+    width: 200px;
+}
+.couverture{
+  position: absolute; 
+  color:white;
+  font-family: 'cinzel';
+  font-size: 40px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  width: 370px;
+    height: 370px;
+  top:0%;
+  left: 0%;
+  border-radius: 9px;
+background: -o-linear-gradient(305deg, #404749, #363b3d);
+background: linear-gradient(145deg, #404749, #363b3d);             
+}
+
+#couv{
+  -webkit-transition: 2s ease-in-out;
+  -o-transition: 2s ease-in-out;
+  transition: 2s ease-in-out;
+}
+ 
+/* .transfert{
+left: 30%;
+
+} */
+.pei{
+    margin-top: 4%;
+    cursor: pointer;
+    color:white;
+    font-weight: bold;
+}
+@-webkit-keyframes arrive{
+    0%{
+        -webkit-transform: translateX(-1200px);
+                transform: translateX(-1200px);
+    }
+    100%{
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+    }
+}
+@keyframes arrive{
+    0%{
+        -webkit-transform: translateX(-1200px);
+                transform: translateX(-1200px);
+    }
+    100%{
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+    }
+}
+@-webkit-keyframes rotation{
+    0%{
+      -webkit-transform:translate(0px,-104px)rotate(0deg) translate(0px,104px);
+              transform:translate(0px,-104px)rotate(0deg) translate(0px,104px)
+    }
+    4%{
+        -webkit-transform:translate(0px,-104px)  rotate(-3deg) translate(0px,104px);
+                transform:translate(0px,-104px)  rotate(-3deg) translate(0px,104px)
+      }
+    8%{
+        -webkit-transform:translate(0px,-104px)  rotate(-7deg) translate(0px,104px);
+                transform:translate(0px,-104px)  rotate(-7deg) translate(0px,104px)
+      }
+    12%{
+        -webkit-transform:translate(0px,-104px)  rotate(-9deg) translate(0px,104px);
+                transform:translate(0px,-104px)  rotate(-9deg) translate(0px,104px)
+      }
+    16%{
+        -webkit-transform:translate(0px,-104px)  rotate(-11deg) translate(0px,104px);
+                transform:translate(0px,-104px)  rotate(-11deg) translate(0px,104px)
+      }
+    20%{
+          -webkit-transform:translate(0px,-104px)  rotate(-12deg) translate(0px,104px);
+                  transform:translate(0px,-104px)  rotate(-12deg) translate(0px,104px)
+        }
+    24%{
+          -webkit-transform:translate(0px,-104px)  rotate(-12deg) translate(0px,104px);
+                  transform:translate(0px,-104px)  rotate(-12deg) translate(0px,104px)
+        }
+    28%{
+          -webkit-transform:translate(0px,-104px)  rotate(-11deg) translate(0px,104px);
+                  transform:translate(0px,-104px)  rotate(-11deg) translate(0px,104px)
+        }
+    32%{
+            -webkit-transform:translate(0px,-104px)  rotate(-10deg) translate(0px,104px);
+                    transform:translate(0px,-104px)  rotate(-10deg) translate(0px,104px)
+          }
+    36%{
+              -webkit-transform:translate(0px,-104px)  rotate(-8deg) translate(0px,104px);
+                      transform:translate(0px,-104px)  rotate(-8deg) translate(0px,104px)
+            }
+    40%{
+              -webkit-transform:translate(0px,-104px)  rotate(-5deg) translate(0px,104px);
+                      transform:translate(0px,-104px)  rotate(-5deg) translate(0px,104px)
+            }
+    44%{
+              -webkit-transform:translate(0px,-104px)  rotate(-2deg) translate(0px,104px);
+                      transform:translate(0px,-104px)  rotate(-2deg) translate(0px,104px)
+            }
+    48%{
+              -webkit-transform:translate(0px,-104px)  rotate(0deg) translate(0px,104px);
+                      transform:translate(0px,-104px)  rotate(0deg) translate(0px,104px)
+            }
+    52%{
+                -webkit-transform:translate(0px,-104px)  rotate(3deg) translate(0px,104px);
+                        transform:translate(0px,-104px)  rotate(3deg) translate(0px,104px)
+              }
+    56%{
+                -webkit-transform:translate(0px,-104px)  rotate(4deg) translate(0px,104px);
+                        transform:translate(0px,-104px)  rotate(4deg) translate(0px,104px)
+              }
+    60%{
+                -webkit-transform:translate(0px,-104px)  rotate(5deg) translate(0px,104px);
+                        transform:translate(0px,-104px)  rotate(5deg) translate(0px,104px)
+              }  
+    64%{
+                -webkit-transform:translate(0px,-104px)  rotate(5deg) translate(0px,104px);
+                        transform:translate(0px,-104px)  rotate(5deg) translate(0px,104px)
+              }
+    68%{
+                  -webkit-transform:translate(0px,-104px)  rotate(3deg) translate(0px,104px);
+                          transform:translate(0px,-104px)  rotate(3deg) translate(0px,104px)
+                }
+  72%{
+                  -webkit-transform:translate(0px,-104px)  rotate(1deg) translate(0px,104px);
+                          transform:translate(0px,-104px)  rotate(1deg) translate(0px,104px)
+                }
+    76%{
+                  -webkit-transform:translate(0px,-104px)  rotate(0deg) translate(0px,104px);
+                          transform:translate(0px,-104px)  rotate(0deg) translate(0px,104px)
+                }
+              80%{
+                  -webkit-transform:translate(0px,-104px)  rotate(-1deg) translate(0px,104px);
+                          transform:translate(0px,-104px)  rotate(-1deg) translate(0px,104px)
+                }
+              84%{
+                    -webkit-transform:translate(0px,-104px)  rotate(-1deg) translate(0px,104px);
+                            transform:translate(0px,-104px)  rotate(-1deg) translate(0px,104px)
+                  }
+              88%{
+                    -webkit-transform:translate(0px,-104px)  rotate(-1deg) translate(0px,104px);
+                            transform:translate(0px,-104px)  rotate(-1deg) translate(0px,104px)
+                  }
+              92%{
+                    -webkit-transform:translate(0px,-104px)  rotate(0deg) translate(0px,104px);
+                            transform:translate(0px,-104px)  rotate(0deg) translate(0px,104px)
+                  }
+              96%{
+                      -webkit-transform:translate(0px,-104px)  rotate(0deg) translate(0px,104px);
+                              transform:translate(0px,-104px)  rotate(0deg) translate(0px,104px)
+                    }
+              100%{
+                        -webkit-transform:translate(0px,-104px)  rotate(0deg) translate(0px,104px);
+                                transform:translate(0px,-104px)  rotate(0deg) translate(0px,104px)
+                      }
+                  
+}
+@keyframes rotation{
+    0%{
+      -webkit-transform:translate(0px,-104px)rotate(0deg) translate(0px,104px);
+              transform:translate(0px,-104px)rotate(0deg) translate(0px,104px)
+    }
+    4%{
+        -webkit-transform:translate(0px,-104px)  rotate(-3deg) translate(0px,104px);
+                transform:translate(0px,-104px)  rotate(-3deg) translate(0px,104px)
+      }
+    8%{
+        -webkit-transform:translate(0px,-104px)  rotate(-7deg) translate(0px,104px);
+                transform:translate(0px,-104px)  rotate(-7deg) translate(0px,104px)
+      }
+    12%{
+        -webkit-transform:translate(0px,-104px)  rotate(-9deg) translate(0px,104px);
+                transform:translate(0px,-104px)  rotate(-9deg) translate(0px,104px)
+      }
+    16%{
+        -webkit-transform:translate(0px,-104px)  rotate(-11deg) translate(0px,104px);
+                transform:translate(0px,-104px)  rotate(-11deg) translate(0px,104px)
+      }
+    20%{
+          -webkit-transform:translate(0px,-104px)  rotate(-12deg) translate(0px,104px);
+                  transform:translate(0px,-104px)  rotate(-12deg) translate(0px,104px)
+        }
+    24%{
+          -webkit-transform:translate(0px,-104px)  rotate(-12deg) translate(0px,104px);
+                  transform:translate(0px,-104px)  rotate(-12deg) translate(0px,104px)
+        }
+    28%{
+          -webkit-transform:translate(0px,-104px)  rotate(-11deg) translate(0px,104px);
+                  transform:translate(0px,-104px)  rotate(-11deg) translate(0px,104px)
+        }
+    32%{
+            -webkit-transform:translate(0px,-104px)  rotate(-10deg) translate(0px,104px);
+                    transform:translate(0px,-104px)  rotate(-10deg) translate(0px,104px)
+          }
+    36%{
+              -webkit-transform:translate(0px,-104px)  rotate(-8deg) translate(0px,104px);
+                      transform:translate(0px,-104px)  rotate(-8deg) translate(0px,104px)
+            }
+    40%{
+              -webkit-transform:translate(0px,-104px)  rotate(-5deg) translate(0px,104px);
+                      transform:translate(0px,-104px)  rotate(-5deg) translate(0px,104px)
+            }
+    44%{
+              -webkit-transform:translate(0px,-104px)  rotate(-2deg) translate(0px,104px);
+                      transform:translate(0px,-104px)  rotate(-2deg) translate(0px,104px)
+            }
+    48%{
+              -webkit-transform:translate(0px,-104px)  rotate(0deg) translate(0px,104px);
+                      transform:translate(0px,-104px)  rotate(0deg) translate(0px,104px)
+            }
+    52%{
+                -webkit-transform:translate(0px,-104px)  rotate(3deg) translate(0px,104px);
+                        transform:translate(0px,-104px)  rotate(3deg) translate(0px,104px)
+              }
+    56%{
+                -webkit-transform:translate(0px,-104px)  rotate(4deg) translate(0px,104px);
+                        transform:translate(0px,-104px)  rotate(4deg) translate(0px,104px)
+              }
+    60%{
+                -webkit-transform:translate(0px,-104px)  rotate(5deg) translate(0px,104px);
+                        transform:translate(0px,-104px)  rotate(5deg) translate(0px,104px)
+              }  
+    64%{
+                -webkit-transform:translate(0px,-104px)  rotate(5deg) translate(0px,104px);
+                        transform:translate(0px,-104px)  rotate(5deg) translate(0px,104px)
+              }
+    68%{
+                  -webkit-transform:translate(0px,-104px)  rotate(3deg) translate(0px,104px);
+                          transform:translate(0px,-104px)  rotate(3deg) translate(0px,104px)
+                }
+  72%{
+                  -webkit-transform:translate(0px,-104px)  rotate(1deg) translate(0px,104px);
+                          transform:translate(0px,-104px)  rotate(1deg) translate(0px,104px)
+                }
+    76%{
+                  -webkit-transform:translate(0px,-104px)  rotate(0deg) translate(0px,104px);
+                          transform:translate(0px,-104px)  rotate(0deg) translate(0px,104px)
+                }
+              80%{
+                  -webkit-transform:translate(0px,-104px)  rotate(-1deg) translate(0px,104px);
+                          transform:translate(0px,-104px)  rotate(-1deg) translate(0px,104px)
+                }
+              84%{
+                    -webkit-transform:translate(0px,-104px)  rotate(-1deg) translate(0px,104px);
+                            transform:translate(0px,-104px)  rotate(-1deg) translate(0px,104px)
+                  }
+              88%{
+                    -webkit-transform:translate(0px,-104px)  rotate(-1deg) translate(0px,104px);
+                            transform:translate(0px,-104px)  rotate(-1deg) translate(0px,104px)
+                  }
+              92%{
+                    -webkit-transform:translate(0px,-104px)  rotate(0deg) translate(0px,104px);
+                            transform:translate(0px,-104px)  rotate(0deg) translate(0px,104px)
+                  }
+              96%{
+                      -webkit-transform:translate(0px,-104px)  rotate(0deg) translate(0px,104px);
+                              transform:translate(0px,-104px)  rotate(0deg) translate(0px,104px)
+                    }
+              100%{
+                        -webkit-transform:translate(0px,-104px)  rotate(0deg) translate(0px,104px);
+                                transform:translate(0px,-104px)  rotate(0deg) translate(0px,104px)
+                      }
+                  
+}
+.container p{
+    color:white;
+    text-align: center;
+    margin-top: 4%;
+    font-family: 'cinzel';
+}
+.input_container{
+     position: relative; 
+    margin-top: 10%; 
+    }
+    
+    .input_icon{
+     position: absolute; 
+    top: 0px;
+    color: red; 
+    left: 2px;
+    font-size: 21px; 
+    width: 50px; 
+   
+    }
+      .input_icon2{
+         position: absolute; 
+        top: 0px;
+        color: red; 
+        left: 2px;
+        font-size: 21px; 
+        width: 50px;
+
+
+        }  
+    input[type="mail"], input[type="password"] {
+        padding-left:70px; 
+        border-radius: 4px;
+    }
+   #submit{
+       background-color: red;
+       color:white;
+       font-family: 'cinzel';
+   }
+   .fa-user-check {
+    font-size: 350%;
+    color:white;
+}
+.fa-unlock-alt{
+    position: absolute; 
+    top: 0px;
+    color: red; 
+    left: 2px;
+    font-size: 21px; 
+    width: 50px;
+
+}
+.fa-user{
+    font-size: 550%;
+    color:white;
+}
+.nav-item{
+     margin-left: 140px;  
+    background-color: red;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+    font-family: 'cinzel';
+    cursor: pointer;
+    border:solid 1 px white;
+    border-radius:8px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+
+}
+.bg-dark {
+    background-color: #141414;
+}
+.containerAll{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    
+}
+
+
+.mdpOublie{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    cursor: pointer;
+}
+.container3{    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    
+}
+.container3 form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+    width: 400px;
+    height: 200px;
+    border: solid 2px black;
+    font-size: 120%;
+    color: white;
+    font-family:'Nerko One', cursive;  
+    font-weight: bold;
+    background-color: black;
+}
+.container3 form input{
+    height: 32px;
+}
+.container3 form input:nth-child(3){
+height: 22px;
+width: 100px;
+background-color: red;
+text-align: center;
+}
